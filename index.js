@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 
-// Routes
+
 app.post('/students', async (req, res) => {
   const student = new Student(req.body);
   await student.save();
@@ -47,7 +47,7 @@ app.delete('/students/:id', async (req, res) => {
   res.send({ message: "Student deleted" });
 });
 
-// Start server
+
 app.listen(3000, () => console.log("Server running on http://localhost:3000"));
 
 
